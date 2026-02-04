@@ -11,7 +11,7 @@ class Whk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.3.0/whk_darwin_amd64.tar.gz"
-      sha256 "032ab9f54bac1530dd97d7515265a578fa734ea098479dd2c43dbc1d44e6fd06"
+      sha256 "876b06e15115e9573d9b78b1b43049e8eb52a855aed6cd2e320198c66e5c4445"
 
       def install
         bin.install "whk"
@@ -19,7 +19,7 @@ class Whk < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.3.0/whk_darwin_arm64.tar.gz"
-      sha256 "0758096d07ea42cd85b4e6b733751f4ae17bb7a46e64a5297760157f0aae3a8f"
+      sha256 "a504a97a4fbb9ddf5515f0b778fef0d65881bc54258efb03ec4d670dffd7ee57"
 
       def install
         bin.install "whk"
@@ -30,14 +30,14 @@ class Whk < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.3.0/whk_linux_amd64.tar.gz"
-      sha256 "d979a012b80f6f71fb0f171d5759f1a2bdaf7db9e64ba486e53ab3df0b111b36"
+      sha256 "7fe845f6b080ca4bb606551c5274afe1bd8cb095b7ec8a97487deafc61a7188b"
       def install
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.3.0/whk_linux_arm64.tar.gz"
-      sha256 "fcf008d77144838ab55e2e9af6f27698066f2386c4d7bc19b2c150cc720c2240"
+      sha256 "85e13049e1cac183ac5b7b7f857c5db7cc1d99febd1aeeaa063b0fdcf7fff567"
       def install
         bin.install "whk"
       end
