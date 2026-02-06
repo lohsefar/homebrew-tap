@@ -5,21 +5,21 @@
 class Whk < Formula
   desc "CLI tool for webhooks.cc - Inspect, forward, and replay webhooks"
   homepage "https://webhooks.cc"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.0/whk_darwin_amd64.tar.gz"
-      sha256 "467bc502ef554e1030381719320a8a542aaa00274c1da046609e9c81020a173a"
+      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.1/whk_darwin_amd64.tar.gz"
+      sha256 "6d52644ad88a99cd3ea164d9abca12c52f65afd558361e3aab25a6eef2e78efa"
 
       def install
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.0/whk_darwin_arm64.tar.gz"
-      sha256 "b56a4747a96def15a609ad025f99d95f840fb3924209dd4d06577ca65e2c2457"
+      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.1/whk_darwin_arm64.tar.gz"
+      sha256 "23d755805967b724984bcb1fd5719178417c60f1d436b5eed063129ac4605198"
 
       def install
         bin.install "whk"
@@ -29,15 +29,15 @@ class Whk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.0/whk_linux_amd64.tar.gz"
-      sha256 "c213c365e2fed4efb3483e5a523c46e7b516652926a3257b06aefa694633aa57"
+      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.1/whk_linux_amd64.tar.gz"
+      sha256 "673b271843ab5c032bc319f28c28e29e3ff60e9a262ac3b21db9609cfa1199aa"
       def install
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.0/whk_linux_arm64.tar.gz"
-      sha256 "7999123a9c9042f48392bcbbf37da1a27dfe00d27499d321dadd23a29d327190"
+      url "https://github.com/lohsefar/webhooks-cc/releases/download/v0.4.1/whk_linux_arm64.tar.gz"
+      sha256 "42b5d8fb8585e3b4b0412d200636d992e7fe1b99b5ed4b36574ec49680146e81"
       def install
         bin.install "whk"
       end
