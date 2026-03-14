@@ -5,23 +5,23 @@
 class Whk < Formula
   desc "CLI tool for webhooks.cc - Inspect, forward, and replay webhooks"
   homepage "https://webhooks.cc"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.1/whk_darwin_amd64.tar.gz"
-      sha256 "411c4d9f7b9558b73629da731619a9c0516a2b9c164a4d23cccfb05dba97e86f"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.2/whk_darwin_amd64.tar.gz"
+      sha256 "55d8a4167768fc983ead61beaf305f61497e11d649212d9e9f6f9d813dd16aa9"
 
-      def install
+      define_method(:install) do
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.1/whk_darwin_arm64.tar.gz"
-      sha256 "0d69807fe0a9032ddee3155ec2d8a55909438833b5155197be092e85243895c3"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.2/whk_darwin_arm64.tar.gz"
+      sha256 "f5f555e1a080e548a759a2068d001983945870def6f1fa960a64dce46fa0a288"
 
-      def install
+      define_method(:install) do
         bin.install "whk"
       end
     end
@@ -29,16 +29,16 @@ class Whk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.1/whk_linux_amd64.tar.gz"
-      sha256 "a81740c2a541eaacffbf34258307d8c3ddf23d34c164d5d11b81a94eabc58475"
-      def install
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.2/whk_linux_amd64.tar.gz"
+      sha256 "3ccf2d53ebd6f1ff8557397c83e8be5fff70f20e93595fd2a394882de41679ac"
+      define_method(:install) do
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.1/whk_linux_arm64.tar.gz"
-      sha256 "9136c4ab114fd5a4c085c018c5378749a50caaab8f8ff66db823d086ce006489"
-      def install
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.2/whk_linux_arm64.tar.gz"
+      sha256 "2c9d381093d95b116fa34a6fcea7801621357381a4c805455cf26cd111a6ecdb"
+      define_method(:install) do
         bin.install "whk"
       end
     end
