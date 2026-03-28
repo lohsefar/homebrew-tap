@@ -5,21 +5,21 @@
 class Whk < Formula
   desc "CLI tool for webhooks.cc - Inspect, forward, and replay webhooks"
   homepage "https://webhooks.cc"
-  version "0.5.3"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.3/whk_darwin_amd64.tar.gz"
-      sha256 "161bb6f9b950cfcff2cc19d550c1fe0f4ffecc79944d17370adb1a642b51e2d9"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.6.0/whk_darwin_amd64.tar.gz"
+      sha256 "f742d3bb28e9d0efd35d5d555d086b02e67e9902ea0106ff8944e99b66adba8b"
 
       define_method(:install) do
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.3/whk_darwin_arm64.tar.gz"
-      sha256 "8e402ea76c41b391dadf69b2e8b04c28e459cb7b4228f5ef6797bcc639a6eb5c"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.6.0/whk_darwin_arm64.tar.gz"
+      sha256 "f79c3c0985bf67a828fbc41b150a9887487d83bb8bb2bff1f25447837047c961"
 
       define_method(:install) do
         bin.install "whk"
@@ -29,15 +29,15 @@ class Whk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.3/whk_linux_amd64.tar.gz"
-      sha256 "8faa9dd660ea0804fa392a307521ee8ce1d00c3dad852d410620fb90b321c89b"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.6.0/whk_linux_amd64.tar.gz"
+      sha256 "f9a7d4c22d4766277efd9a6273b3338b44a4c891fc88959bc2dc8d2b4d22e6a7"
       define_method(:install) do
         bin.install "whk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.5.3/whk_linux_arm64.tar.gz"
-      sha256 "68e03424f6f826534d45e5fe027bb608457d066cac8dade6a6426da1b4c28ae2"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v0.6.0/whk_linux_arm64.tar.gz"
+      sha256 "4efa1fd2f063fdb2ac6b05de7904377a79b7e53c5cf3cd765064de75f5665e55"
       define_method(:install) do
         bin.install "whk"
       end
